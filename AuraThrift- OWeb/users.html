@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AuraThrift Admin - User Management</title>
+  <link rel="stylesheet" href="admin-style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>User Management</h1>
+
+    <section class="user-actions">
+      <h2>Add New User</h2>
+      <form action="create_user.php" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <select name="role" required>
+          <option value="admin">Admin</option>
+          <option value="manager">Manager</option>
+          <option value="support">Support</option>
+        </select>
+        <button type="submit">Create User</button>
+      </form>
+    </section>
+
+    <section class="user-list">
+      <h2>All Users</h2>
+      <!-- This table will be dynamically filled by PHP -->
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- PHP will output users here -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

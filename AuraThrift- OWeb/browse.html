@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Products - AuraThrift</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>AuraThrift</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="sell.html">Sell Now</a>
+            <a href="login.html">Login/Register</a>
+            <a href="cart.html" class="cart-link">
+                <img src="images/OIP.jpeg" alt="Cart" height="20">
+                <span class="cart-badge">0</span> Cart
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Browse Our Gear</h2>
+
+        <!-- Filter section -->
+        <section class="filters">
+            <label><input type="checkbox" class="filter-sport" value="Soccer"> Soccer</label>
+            <label><input type="checkbox" class="filter-sport" value="Basketball"> Basketball</label>
+            <label><input type="checkbox" class="filter-sport" value="Tennis"> Tennis</label>
+            <label><input type="checkbox" class="filter-sport" value="Rugby"> Rugby</label>
+
+            <select id="filter-size">
+                <option value="">Any Size</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">XL</option>
+            </select>
+
+            <input type="number" id="min-price" placeholder="Min Price">
+            <input type="number" id="max-price" placeholder="Max Price">
+
+            <button id="apply-filters-btn">Apply Filters</button>
+            <button id="clear-filters-btn">Clear Filters</button>
+        </section>
+
+        <!-- Product listings container -->
+        <div id="filtered-listings-container" class="filtered-listings-container"></div>
+        <p id="no-results-message" style="display:none;">No items match your filters.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AuraThrift</p>
+    </footer>
+
+    <!-- Your script -->
+    <script src="script.js"></script>
+</body>
+</html>

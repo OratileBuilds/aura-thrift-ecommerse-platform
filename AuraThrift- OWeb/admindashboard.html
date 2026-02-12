@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - AuraThrift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="admin-header">
+    <h1>AuraThrift Admin</h1>
+    <nav>
+      <a href="dashborad.html">Dashboard</a>
+      <a href="product.html">Products</a>
+      <a href="users.html">Users</a>
+      <a href="orders.html">Orders</a>
+      <a href="logout.php">Logout</a>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-summary">
+      <div class="card">Total Products: <span id="productCount">0</span></div>
+      <div class="card">Total Users: <span id="userCount">0</span></div>
+      <div class="card">Orders: <span id="orderCount">0</span></div>
+    </section>
+
+    <section class="admin-table">
+      <h2>Recent Orders</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>User</th>
+            <th>Product</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic rows will be loaded by PHP -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
